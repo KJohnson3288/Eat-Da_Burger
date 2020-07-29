@@ -1,6 +1,8 @@
-  
+//Dependencies
 var connection = require("./connection");
 
+
+//Function for SQL syntax
 function printQuestionMarks(input) {
     var array = [];
 
@@ -11,6 +13,7 @@ function printQuestionMarks(input) {
     return array.toString()
 }
 
+//Function to convert key/value pairs
 function objToSql(obj) {
     var arr = [];
 
@@ -28,6 +31,8 @@ function objToSql(obj) {
     }
 }
 
+
+//ORM Functions
 var orm = {
     selectAll: function(tableInput, cb) {
         var qs = "SELECT * FROM " + tableInput + ";";
